@@ -65,24 +65,26 @@ async def post(event):
     yanitlanan_mesaj = await event.get_reply_message()
     count = 0
     await event.edit("`Post gönderiliyor...`")
-    try:
-        if yanitlanan_mesaj.media:
-            await event.client.send_file(
-                -1001469818787,-1001223291557,
-                file=yanitlanan_mesaj.media,
-                caption=yanitlanan_mesaj.text,
+    kanallar = [-1001469818787,-1001223291557]
+    for kanal in kanallar:
+        try:
+
+            if yanitlanan_mesaj.media:
+                await event.client.send_file(
+                    kanal,
+                    file=yanitlanan_mesaj.media,
+                    caption=yanitlanan_mesaj.text,
+                )
+            else:
+                await event.client.send_message(kanal, yanitlanan_mesaj.text)
+        except Exception as e:
+            grup_kanal = await event.client.get_entity(kanal)
+            await event.reply(
+                f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal.title}"
             )
         else:
-            await event.client.send_message(-1001469818787, yanitlanan_mesaj.text)
-    except Exception as e:
-        grup_kanal = await event.client.get_entity(-1001469818787)
-        await event.reply(
-            f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal.title}"
-        )
-    else:
-        count += 1
-    grup_kanal = await event.client.get_entity(-1001469818787)
-    await event.edit(f"{grup_kanal.title} `kanalına post gönderildi.`")
+            count += 1
+    await event.edit("`{} adet kanala post gönderildi.`".format(len(kanallar)))
 
 
 # -------------------------------------------------------
