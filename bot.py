@@ -68,7 +68,7 @@ async def post(event):
     try:
         if yanitlanan_mesaj.media:
             await event.client.send_file(
-                -1001469818787,
+                -1001469818787,-1001223291557,
                 file=yanitlanan_mesaj.media,
                 caption=yanitlanan_mesaj.text,
             )
