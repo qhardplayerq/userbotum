@@ -194,7 +194,7 @@ async def otoreklamm(event):
 
 # ----------------------------------------------------------------------------------
 
-@bot.on(event.NewMessage(pattern=".sil"))
+@bot.on(events.NewMessage(pattern=".sil"))
 async def sil(event):
     yanitlanan_mesaj = await event.get_reply_message()
     await yanitlanan_mesaj.delete()
