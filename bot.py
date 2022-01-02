@@ -169,15 +169,16 @@ id_list = [
     -1001384162511,
     -1001535512195,
 ]
+id_list2 = [1144967052]
 
 
 @bot.on(events.NewMessage(pattern="^.otopnd"))
 async def otoreklamm(event):
-    global id_list
+    global id_list2
     text = "PND.TL Olarak Türkiyedeki En yüksek CPM oranı veren site olarak kazancınıza kazanç katıyoruz\n\n**22TL CPM**\n**Eksiksiz Sayım**\n**Temiz IP Havuzu**\n**Bol Kazançlı Etkinlikler**\n**Kolay Reklam Geçişi**\n**Yetkililer İle Kolay İletişim**\n\nSizinde Tek Yapmanız Gereken Bizi Kullanmak\n\nSorularınız ve düşünceleriniz için DM 👇\nİletişim: @BlackkSkyyqq"
     await event.edit("Çalışıyor.")
     while True:
-        for x in id_list:
+        for x in id_list2:
             try:
                 await bot.send_file(
                     int(x),
