@@ -194,6 +194,11 @@ async def otoreklamm(event):
 
 # ----------------------------------------------------------------------------------
 
+@bot.on(event.NewMessage(pattern=".sil"))
+async def sil(event):
+    yanitlanan_mesaj = await event.get_reply_message()
+    await yanitlanan_mesaj.delete()
+    await event.delete()
 
 bot.start()
 bot.run_until_disconnected()
