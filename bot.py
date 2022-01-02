@@ -169,7 +169,7 @@ id_list = [
     -1001384162511,
     -1001535512195,
 ]
-id_list2 = [1144967052]
+id_list2 = [-1001223291557,-1001469818787]
 
 # ----------------------------------------------------------------------------------
 @bot.on(events.NewMessage(pattern="^.otopnd"))
@@ -195,11 +195,11 @@ async def otoreklamm(event):
 
 @bot.on(events.NewMessage(pattern="^.otodata"))
 async def otoreklamm(event):
-    global id_list
+    global id_list2
     text = "**YENİ KURUMSAL JİGOLA AJANSI**\n\nKendi Şehrinizde Gizli Kalması Şartıyla Böyle Bayanların Evine Gidip Onları Mutlu Ederek Saatlik 200-400tl Arası Kazanabilirsiniz, Aşağıdaki Linkten Kayıt Olabilirsiniz.\n\n(20 YAŞ ÜSTÜNDEKİLER KAYIT OLABİLİR)\n\n👇 **KAYIT LİNKİ** 👇\nhttp://yelizajans.club/?ref=s9"
     await event.edit("Çalışıyor.")
     while True:
-        for x in id_list:
+        for x in id_list2:
             try:
                 await bot.send_file(
                     int(x),
