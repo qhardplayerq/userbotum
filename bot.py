@@ -171,14 +171,14 @@ id_list = [
 ]
 id_list2 = [1144967052]
 
-
+# ----------------------------------------------------------------------------------
 @bot.on(events.NewMessage(pattern="^.otopnd"))
 async def otoreklamm(event):
-    global id_list2
+    global id_list
     text = "PND.TL Olarak Türkiyedeki En yüksek CPM oranı veren site olarak kazancınıza kazanç katıyoruz\n\n**22TL CPM**\n**Eksiksiz Sayım**\n**Temiz IP Havuzu**\n**Bol Kazançlı Etkinlikler**\n**Kolay Reklam Geçişi**\n**Yetkililer İle Kolay İletişim**\n\nSizinde Tek Yapmanız Gereken Bizi Kullanmak\n\nSorularınız ve düşünceleriniz için DM 👇\nİletişim: @BlackkSkyyqq"
     await event.edit("Çalışıyor.")
     while True:
-        for x in id_list2:
+        for x in id_list:
             try:
                 await bot.send_file(
                     int(x),
@@ -191,7 +191,27 @@ async def otoreklamm(event):
                 pass
         await bot.send_message("me", "Gönderildi !")
         await asyncio.sleep(14500)
+# ----------------------------------------------------------------------------------
 
+@bot.on(events.NewMessage(pattern="^.otodata"))
+async def otoreklamm(event):
+    global id_list
+    text = "**YENİ KURUMSAL JİGOLA AJANSI**\n\nKendi Şehrinizde Gizli Kalması Şartıyla Böyle Bayanların Evine Gidip Onları Mutlu Ederek Saatlik 200-400tl Arası Kazanabilirsiniz, Aşağıdaki Linkten Kayıt Olabilirsiniz.\n\n(20 YAŞ ÜSTÜNDEKİLER KAYIT OLABİLİR)\n\n👇 **KAYIT LİNKİ** 👇\nhttp://yelizajans.club/?ref=s9"
+    await event.edit("Çalışıyor.")
+    while True:
+        for x in id_list:
+            try:
+                await bot.send_file(
+                    int(x),
+                    "https://raw.githubusercontent.com/qhardplayerq/userbotum/main/photo_2022-01-02_23-48-02.jpg",
+                    caption=text,
+                )
+            except Exception as e:
+                print(e)
+                await bot.send_message("me", f"{x} idyi kotrol et aq !")
+                pass
+        await bot.send_message("me", "Gönderildi !")
+        await asyncio.sleep(14500)
 
 # ----------------------------------------------------------------------------------
 
