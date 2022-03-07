@@ -144,12 +144,6 @@ async def odeme(event):
     )
 
 
-@bot.on(events.NewMessage(pattern=".api"))
-async def api(event):
-    resim = "https://raw.githubusercontent.com/qhardplayerq/SiriUserBot-1/master/userbot/modules/api.JPG"
-    text = "APİ adresimize sol taraftaki menü çubuğundaki **Araçlar** sekmesinden **Geliştirici API** bölümünden yeşil kutunun içinde bulabilirsiniz..."
-    await event.client.send_file(event.chat_id, file=resim, caption=text)
-
 
 id_list = [
     -1001275989066,
