@@ -192,7 +192,7 @@ async def otoreklamm(event):
 @bot.on(events.NewMessage(pattern="^.otodata"))
 async def otoreklamm(event):
     global id_list2
-    text = "**YENİ KURUMSAL JİGOLA AJANSI**\n\nKendi Şehrinizde Gizli Kalması Şartıyla Böyle Bayanların Evine Gidip Onları Mutlu Ederek Saatlik 200-400tl Arası Kazanabilirsiniz, \nAşağıdaki Linkten Kayıt Olabilirsiniz.\n\n(18 YAŞ ÜSTÜNDEKİLER KAYIT OLABİLİR)\n\n👇 **KAYIT LİNKİ** 👇\nhttps://vipajans35.com/?ref=wti6-91"
+    text = "**YENİ KURUMSAL JİGOLA AJANSI**\n\nKendi Şehrinizde Gizli Kalması Şartıyla Böyle Bayanların Evine Gidip Onları Mutlu Ederek Saatlik 200-400tl Arası Kazanabilirsiniz, \nAşağıdaki Linkten Kayıt Olabilirsiniz.\n\n(18 YAŞ ÜSTÜNDEKİLER KAYIT OLABİLİR)\n\n👇 **KAYIT LİNKİ** 👇\nhttps://venusajans.xyz/?ref=wti6-91"
     await event.edit("Çalışıyor.")
     while True:
         for x in id_list2:
