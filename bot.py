@@ -223,26 +223,26 @@ bot.run_until_disconnected()
 # ----------------------------------------------------------------------------------
 
 @bot.on(events.NewMessage(pattern=".sfs ?(.*)"))
-async def post(event):
-    yanitlanan_mesaj = await event.get_reply_message()
+async def post2(event):
+    yanitlanan_mesaj2 = await event.get_reply_message()
     count = 0
     await event.edit("`SFS POSTU GÖNDERİLİYOR...`")
     kanallar2 = [-1001220139840,-1001371237925,-1001507440635]
-    for kanal in kanallar2:
+    for kanal2 in kanallar2:
         try:
 
-            if yanitlanan_mesaj.media:
+            if yanitlanan_mesaj2.media:
                 await event.client.send_file(
-                    kanal,
-                    file=yanitlanan_mesaj.media,
-                    caption=yanitlanan_mesaj.text,
+                    kanal2,
+                    file=yanitlanan_mesaj2.media,
+                    caption=yanitlanan_mesaj2.text,
                 )
             else:
-                await event.client.send_message(kanal, yanitlanan_mesaj.text)
+                await event.client.send_message(kanal2, yanitlanan_mesaj2.text)
         except Exception as e:
-            grup_kanal = await event.client.get_entity(kanal)
+            grup_kanal2 = await event.client.get_entity(kanal2)
             await event.reply(
-                f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal.title}"
+                f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal2.title}"
             )
         else:
             count += 1
