@@ -247,3 +247,34 @@ async def post2(event):
         else:
             count += 1
     await event.edit("`{} YUHANSA SFS POSTU GÖNDERİLDİ.`".format(len(kanallar2)))
+
+    
+    
+    # ----------------------------------------------------------------------------------
+    
+    
+@bot.on(events.NewMessage(pattern="sfs ?(.*)"))
+async def postx(event):
+    yanitlanan_mesajx = await event.get_reply_message()
+    count = 0
+    await event.edit("`sfs gönderiliyor...`")
+    kanallarx = [-1001469818787,-1001223291557]
+    for kanalx in kanallarx:
+        try:
+
+            if yanitlanan_mesajx.media:
+                await event.client.send_file(
+                    kanalx,
+                    file=yanitlanan_mesajx.media,
+                    caption=yanitlanan_mesajx.text,
+                )
+            else:
+                await event.client.send_message(kanalx, yanitlanan_mesajx.text)
+        except Exception as e:
+            grup_kanal = await event.client.get_entity(kanalx)
+            await event.reply(
+                f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal.title}"
+            )
+        else:
+            count += 1
+    await event.edit("`{} adet sfs gönderildi.`".format(len(kanallarx)))
