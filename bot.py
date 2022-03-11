@@ -222,59 +222,28 @@ bot.run_until_disconnected()
 
 # ----------------------------------------------------------------------------------
 
-@bot.on(events.NewMessage(pattern=".sfs ?(.*)"))
-async def post2(event):
-    yanitlanan_mesaj2 = await event.get_reply_message()
-    count = 0
-    await event.edit("`SFS POSTU GÖNDERİLİYOR...`")
-    kanallar2 = [-1001220139840,-1001371237925,-1001507440635]
-    for kanal2 in kanallar2:
-        try:
-
-            if yanitlanan_mesaj2.media:
-                await event.client.send_file(
-                    kanal2,
-                    file=yanitlanan_mesaj2.media,
-                    caption=yanitlanan_mesaj2.text,
-                )
-            else:
-                await event.client.send_message(kanal2, yanitlanan_mesaj2.text)
-        except Exception as e:
-            grup_kanal2 = await event.client.get_entity(kanal2)
-            await event.reply(
-                f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal2.title}"
-            )
-        else:
-            count += 1
-    await event.edit("`{} YUHANSA SFS POSTU GÖNDERİLDİ.`".format(len(kanallar2)))
-
-    
-    
-    # ----------------------------------------------------------------------------------
-    
-    
-@bot.on(events.NewMessage(pattern="sfs ?(.*)"))
-async def postx(event):
-    yanitlanan_mesajx = await event.get_reply_message()
+@bot.on(events.NewMessage(pattern=".xcv ?(.*)"))
+async def post(event):
+    yanitlanan_mesaj = await event.get_reply_message()
     count = 0
     await event.edit("`sfs gönderiliyor...`")
-    kanallarx = [-1001469818787,-1001223291557]
-    for kanalx in kanallarx:
+    kanallar = [-1001371237925, -1001220139840, -1001507440635]
+    for kanal in kanallar:
         try:
 
-            if yanitlanan_mesajx.media:
+            if yanitlanan_mesaj.media:
                 await event.client.send_file(
-                    kanalx,
-                    file=yanitlanan_mesajx.media,
-                    caption=yanitlanan_mesajx.text,
+                    kanal,
+                    file=yanitlanan_mesaj.media,
+                    caption=yanitlanan_mesaj.text,
                 )
             else:
-                await event.client.send_message(kanalx, yanitlanan_mesajx.text)
+                await event.client.send_message(kanal, yanitlanan_mesaj.text)
         except Exception as e:
-            grup_kanal = await event.client.get_entity(kanalx)
+            grup_kanal = await event.client.get_entity(kanal)
             await event.reply(
                 f"Bir kanala post gönderilemedi!\n\n{e}\n\n{grup_kanal.title}"
             )
         else:
             count += 1
-    await event.edit("`{} adet sfs gönderildi.`".format(len(kanallarx)))
+    await event.edit("`{} adet kanala post gönderildi.`".format(len(kanallar)))
