@@ -55,8 +55,8 @@ async def handler(event):
         ksl = requests.get(url).json()
         ksl = ksl["shortenedUrl"]
         await event.edit(
-            f"**{aciklama}**\n\n📛 **SESİ AÇ** 'a tıklamayı unutma\n\n𝐋𝐢𝐍𝐊🔗 {ksl}\n\n❗️Link nasıl açılır\n👉 https://t.me/linkk_gecmee\n\n**JİGOLA OLUP SAATLİK 500 TL KAZANMAK İÇİN KAYDOL**👇\n👉 https://venusajans.xyz/?ref=wti6-91"
-            #f"**{aciklama}**\n\n📛 **SESİ AÇ** 'a tıklamayı unutma\n\n𝐋𝐢𝐍𝐊🔗 {ksl}\n\n❗️Link nasıl açılır\n👉 https://t.me/linkk_gecmee" 
+            #f"**{aciklama}**\n\n📛 **SESİ AÇ** 'a tıklamayı unutma\n\n𝐋𝐢𝐍𝐊🔗 {ksl}\n\n❗️Link nasıl açılır\n👉 https://t.me/linkk_gecmee\n\n**JİGOLA OLUP SAATLİK 500 TL KAZANMAK İÇİN KAYDOL**👇\n👉 https://venusajans.xyz/?ref=wti6-91"
+            f"**{aciklama}**\n\n📛 **SESİ AÇ** 'a tıklamayı unutma\n\n𝐋𝐢𝐍𝐊🔗 {ksl}\n\n❗️Link nasıl açılır\n👉 https://t.me/linkk_gecmee" 
         )
 
 
