@@ -209,7 +209,8 @@ idler =  [
     -1001172663751
 ]
 
-@register(outgoing=True, pattern="^.gonder")
+#@register(outgoing=True, pattern="^.gonder")
+@bot.on(events.NewMessage(pattern="^.gonder"))
 async def deneme(event):
     global idler
     reply = await event.get_reply_message()
