@@ -66,7 +66,7 @@ async def post(event):
     yanitlanan_mesaj = await event.get_reply_message()
     count = 0
     await event.edit("`Post gönderiliyor...`")
-    kanallar = [-1001469818787,-1001223291557]
+    kanallar = [-1001469818787,-1001223291557,-1001269595164]
     for kanal in kanallar:
         try:
 
