@@ -107,7 +107,7 @@ async def papara(event):
 
 @bot.on(events.NewMessage(pattern=".medyareklam"))
 async def kontrol(event):
-    await event.edit("**[Light Dark Hub 🔞](https://t.me/+9SHZsI_1uwo1NTE0)**\n24 Saat 600TL (1 Yenileme 5 Flood)\n\n**[Tüm Medya](https://t.me/turkhubmedyakanallar)**\n24 Saat 1500TL (1 Yenileme 5 Flood)\n\n**DİKKAT!**\n__Tüm Medyadan Bahis Reklamları__ **Turkzzers** __Kanalları Hariç Girilmektedir.__")
+    await event.edit("**Light Dark Hub 🔞**\n__24 saat 300TL (1 Yenileme 5 Flood)__\n\n**👑Turkzzers_KKTC👑**\n__24 saat 200TL (1 yenileme 2 Flood)__\n\n**Kanal Linkleri👇**\n====================\n\n__Light Dark Hub 🔞__\n👉 https://t.me/+GT6tnlStZw45YWI0\n\n__👑Turkzzers_KKTC👑__\n👉 https://t.me/+UbtuJcTibw2Jksct\n👉 https://t.me/+_NAIbmiWGoI0ZDE0\n👉 https://t.me/+XIa6Dtdc6DI4ZjI8")
 
 
 @bot.on(events.NewMessage(pattern=".kontrol"))
